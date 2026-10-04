@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div>
+        <div className=" h-[1000px]">
             about
         </div>
     )
