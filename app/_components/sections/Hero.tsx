@@ -62,14 +62,16 @@ export default function Hero() {
           {/* Right: Portrait */}
           <div className="relative mt-12 h-[60vh] lg:col-span-5 lg:mt-0 lg:h-[85vh]">
             <div className="relative h-full w-full">
+              {/* <div className=" bg-accent/40 w-95  rounded-full top-13 h-110 left-20 absolute"></div> */}
+              <div className=" bg-accent/20 w-130 rounded-full h-130 left-0 absolute"></div>
               <Image
-                src="/hero-image.jpg"
+                src="/heroI.png"
                 alt="Creator portrait"
                 fill
-                className="h-full w-full object-cover object-center grayscale-20 mix-blend-luminosity"
+                loading="eager"
+                className="h-full w-full object-contain object-center grayscale-0 mix-blend-luminosity rounded-2xl rotate-y-180"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-linear-to-l from-transparent via-brand-orange/10 to-brand-orange/30" />
-              <div className="absolute inset-0 bg-linear-to-t from-brand-deep-red/40 via-transparent to-transparent" />
             </div>
           </div>
         </div>
@@ -82,7 +84,7 @@ export default function Hero() {
             Location
           </span>
           <span className="text-[11px] font-display uppercase tracking-[0.15em] text-white">
-            40.7128° N, 74.0060° W
+            Egypt, Cairo
           </span>
         </div>
         <div className="hidden flex-col items-end gap-1 sm:flex">

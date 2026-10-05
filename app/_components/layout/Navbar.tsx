@@ -37,7 +37,7 @@ export default function Navbar() {
             href="#top"
             className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-white"
           >
-            KAI<span className="text-brand-orange">.</span>STUDIO
+            K<span className="text-brand-orange">.</span>Mashour
           </a>
 
           <div className="hidden items-center gap-10 md:flex">
