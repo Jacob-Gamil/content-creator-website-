@@ -62,7 +62,7 @@ export default function LatestContent() {
             <div key={p.title}>
               <div className="group block">
                 <Link href={p.href} className="" target="_blank">
-                  <div className="relative h-120 w-full overflow-hidden">
+                  <div className="relative h-120 rounded-lg w-full overflow-hidden">
                     <Image
                       src={p.img}
                       alt={p.title}

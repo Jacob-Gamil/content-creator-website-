@@ -181,7 +181,7 @@ export default function Navbar() {
       <div
         ref={menuRef}
         aria-hidden={!open}
-        className="invisible fixed inset-0 z-60 bg-brand-black grain md:hidden"
+        className="invisible fixed inset-0 z-9999 bg-brand-black grain md:hidden"
       >
         <div className="flex items-center justify-between px-6 py-5">
           <span className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-white">
