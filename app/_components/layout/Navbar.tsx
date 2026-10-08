@@ -77,7 +77,7 @@ export default function Navbar() {
           <div className="fixed inset-0 z-60 bg-brand-black grain md:hidden">
             <div className="flex items-center justify-between px-6 py-5">
               <span className="font-display text-sm font-semibold uppercase tracking-[0.25em] text-white">
-                KAI<span className="text-brand-orange">.</span>STUDIO
+                K<span className="text-brand-orange">.</span>Mashour
               </span>
               <button
                 aria-label="Close menu"

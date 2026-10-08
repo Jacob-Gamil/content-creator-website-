@@ -2,21 +2,36 @@ import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "../ui/SectionLabel";
 
 const platforms = [
-  { name: "YouTube", handle: "@kaistudio", followers: "92K" },
-  { name: "Instagram", handle: "@kai.creates", followers: "48K" },
-  { name: "TikTok", handle: "@kaistudio", followers: "120K" },
-  { name: "X", handle: "@kaistudio", followers: "18K" },
-  { name: "LinkedIn", handle: "in/kaistudio", followers: "6.4K" },
+  {
+    name: "Instagram",
+    handle: "@mashhour._",
+    href: "https://instagram.com/mashhour._",
+    // followers: "92K",
+  },
+  {
+    name: "Facebook",
+    handle: "@kai.creates",
+    href: "https://facebook.com/share/1LQDNsss34/?mibextid=wwXIfr",
+    // followers: "48K",
+  },
+  {
+    name: "TikTok",
+    handle: "@kaistudio",
+    href: "https://tiktok.com/@khaledramadan13",
+    // followers: "120K",
+  },
+  // { name: "X", handle: "@kaistudio", followers: "18K" },
+  // { name: "LinkedIn", handle: "in/kaistudio", followers: "6.4K" },
 ];
 
 export default function SocialPlatforms() {
   return (
-    <section className="relative bg-brand-void py-24 lg:py-32">
+    <section className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <SectionLabel index="05" label="Social Platforms" />
-            <h2 className="mt-6 font-display text-[10vw] font-light uppercase leading-[0.85] tracking-mega text-white sm:text-[7vw] lg:text-[5vw]">
+            <h2 className="mt-6 font-display text-[10vw] font-light uppercase leading-[0.85] tracking-wide text-white sm:text-[7vw] lg:text-[5vw]">
               Find Me
               <br />
               <span className="text-brand-orange">Everywhere.</span>
@@ -24,11 +39,13 @@ export default function SocialPlatforms() {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-px border-t border-white/10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-16 grid grid-cols-1 gap-px border-t border-b border-white/10 sm:grid-cols-2 lg:grid-cols-5 w-full">
           {platforms.map((p, i) => (
-            <div key={p.name}>
+            <div key={p.name} className="">
               <a
-                href="#"
+                href={`${p.href}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex h-full flex-col justify-between border-b border-r border-white/10 p-6 transition-colors duration-500 hover:bg-brand-orange last:border-r-0 lg:p-8"
               >
                 <div className="flex items-start justify-between">
@@ -47,9 +64,9 @@ export default function SocialPlatforms() {
                   <p className="mt-2 font-body text-sm text-white/60 transition-colors group-hover:text-white/90">
                     {p.handle}
                   </p>
-                  <p className="mt-6 font-display text-[11px] uppercase tracking-[0.2em] text-white/40 transition-colors group-hover:text-white/80">
-                    {p.followers} Followers
-                  </p>
+                  {/* <p className="mt-6 font-display text-[11px] uppercase tracking-[0.2em] text-white/40 transition-colors group-hover:text-white/80">
+                    {p.followers} 
+                  </p> */}
                 </div>
               </a>
             </div>

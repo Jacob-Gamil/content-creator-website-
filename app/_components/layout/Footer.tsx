@@ -1,11 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 
 const socials = [
-  { name: "YouTube", href: "#" },
-  { name: "Instagram", href: "#" },
-  { name: "TikTok", href: "#" },
-  { name: "X", href: "#" },
-  { name: "LinkedIn", href: "#" },
+  {
+    name: "facebook",
+    href: "https://www.facebook.com/share/1FQNkTsXJ3/?mibextid=wwXIfr",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/mashhour._?rpxt=dGpqYWxuYXNqbm1m&utm_source=qr",
+  },
+  { name: "TikTok", href: "https://www.tiktok.com/@khaledramadan13" },
 ];
 
 const nav = [
@@ -31,12 +35,17 @@ export default function Footer() {
               A digital auteur crafting visual stories, content, and experiences
               that turn ideas into attention.
             </p>
-            <a
-              href="mailto:hello@kaistudio.com"
-              className="mt-6 inline-block font-display text-lg text-white underline decoration-brand-orange/60 underline-offset-4 transition-colors hover:text-brand-orange"
-            >
-              hello@kaistudio.com
-            </a>
+            <div className=" flex flex-col">
+              <a
+                href="mailto:hello@kaistudio.com"
+                className="mt-6 inline-block font-display text-lg text-white underline decoration-brand-orange/60 underline-offset-4 transition-colors hover:text-brand-orange"
+              >
+                khaledmashhor136@gamil.com
+              </a>
+              <h1 className="mt-2 inline-block font-display text-lg text-white underline decoration-brand-orange/60 underline-offset-4 transition-colors hover:text-brand-orange">
+                + (20) 1026700467
+              </h1>
+            </div>
           </div>
 
           <div className="md:col-span-3 md:col-start-7">
@@ -66,6 +75,7 @@ export default function Footer() {
                 <li key={s.name}>
                   <a
                     href={s.href}
+                    target="_blank"
                     className="group inline-flex items-center gap-2 font-display text-sm uppercase tracking-[0.15em] text-white/70 transition-colors hover:text-brand-orange"
                   >
                     {s.name}

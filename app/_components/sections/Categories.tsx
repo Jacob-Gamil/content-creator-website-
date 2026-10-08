@@ -2,11 +2,31 @@ import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "../ui/SectionLabel";
 
 const categories = [
-  { num: "01", label: "Video" },
-  { num: "02", label: "Education" },
-  { num: "03", label: "Tech" },
-  { num: "04", label: "Lifestyle" },
-  { num: "05", label: "Storytelling" },
+  {
+    num: "01",
+    label: "Video",
+    href: "https://www.instagram.com/reel/DbGRWt5oiRa/?exln=dTJhN3J4NGd0a2Fs",
+  },
+  {
+    num: "02",
+    label: "Education",
+    href: "https://www.instagram.com/reel/DcGo-LvIPjT/?exln=NHpnMThpcXJramw5",
+  },
+  {
+    num: "03",
+    label: "Behind the views",
+    href: "https://www.instagram.com/reel/DZ-LwIRISXx/?cplk=MW40eDg1azQ4OGQxYQ==",
+  },
+  {
+    num: "04",
+    label: "Lifestyle",
+    href: "https://www.instagram.com/reel/DbnuNcGockQ/?xtok=ZGIzdzlocjJoZTI5",
+  },
+  {
+    num: "05",
+    label: "Storytelling",
+    href: "https://www.instagram.com/reel/DdJwtCvoXzC/?exln=ZHViN3ZvYzJubGls",
+  },
 ];
 
 export default function Categories() {
@@ -26,7 +46,8 @@ export default function Categories() {
           {categories.map((c, i) => (
             <div key={i}>
               <a
-                href="#work"
+                href={c.href}
+                target="_blank"
                 className="group relative flex items-center justify-between border-b border-white/10 py-8 transition-colors duration-500 hover:bg-brand-orange lg:py-12"
               >
                 <div className="flex items-baseline gap-6 lg:gap-12">

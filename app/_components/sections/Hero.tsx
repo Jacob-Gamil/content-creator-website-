@@ -1,19 +1,44 @@
+"use client";
+
+import gsap from "gsap";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { useLayoutEffect } from "react";
 
 export default function Hero() {
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      "#image",
+      {
+        opacity: 0,
+        filter: "blur(20px)",
+        y: 40,
+        scale: 1.1,
+      },
+      {
+        opacity: 1,
+        scale: 1,
+
+        filter: "blur(0px)",
+        y: 0,
+        duration: 2,
+        ease: "power3.out",
+      },
+    );
+  }, []);
+
   return (
     <section
       id="top"
       className="relative min-h-screen w-full overflow-hidden bg-cinematic-gradient grain"
     >
       {/* Hairline grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
+      {/* <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
         <div className="absolute left-[10%] h-full w-px bg-white" />
         <div className="absolute left-[50%] h-full w-px bg-white" />
         <div className="absolute top-[22%] w-full h-px bg-white" />
         <div className="absolute bottom-[18%] w-full h-px bg-white" />
-      </div>
+      </div> */}
 
       <div className="relative z-10 mx-auto grid min-h-screen max-w-[1600px] grid-cols-1 items-center px-6 lg:px-10">
         <div className="grid grid-cols-1 items-center lg:grid-cols-12">
@@ -29,7 +54,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="mt-8 font-display text-[18vw] font-light uppercase leading-[0.82] tracking-mega text-white sm:text-[15vw] lg:text-[10vw]">
+            <h1 className="mt-8 font-display text-[18vw] font-light uppercase leading-[0.90] tracking-mega text-white sm:text-[15vw] lg:text-[10vw]">
               <span className="block overflow-hidden">
                 <span className="block">Create</span>
               </span>
@@ -62,14 +87,14 @@ export default function Hero() {
           {/* Right: Portrait */}
           <div className="relative mt-12 h-[60vh] lg:col-span-5 lg:mt-0 lg:h-[85vh]">
             <div className="relative h-full w-full">
-              {/* <div className=" bg-accent/40 w-95  rounded-full top-13 h-110 left-20 absolute"></div> */}
               <div className=" bg-accent/20 w-130 rounded-full h-130 left-0 absolute"></div>
               <Image
+                id="image"
                 src="/heroI.png"
                 alt="Creator portrait"
                 fill
                 loading="eager"
-                className="h-full w-full object-contain object-center grayscale-0 mix-blend-luminosity rounded-2xl rotate-y-180"
+                className="h-full w-full object-contain object-center grayscale-0 opacity-0 mix-blend-luminosity rounded-2xl rotate-y-180"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
