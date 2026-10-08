@@ -10,7 +10,7 @@ const posts = [
     date: "Mar 2026",
     views: "3.300M",
     href: "https://www.instagram.com/reel/DZQNM4hMoUe/?stkn=aHFvaXg4azVicjZz",
-    img: "/image-6.png",
+    img: "/img-6.jpg",
   },
   {
     platform: "facebook",
@@ -18,7 +18,7 @@ const posts = [
     href: "https://www.facebook.com/share/v/16FrLFogpQo/?mibextid=wwXIfr",
     date: "Mar 2026",
     views: "145K",
-    img: "/image-7.png",
+    img: "/img-7.jpg",
   },
   {
     platform: "TikTok",
