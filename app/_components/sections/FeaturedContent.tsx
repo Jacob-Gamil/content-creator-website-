@@ -58,7 +58,7 @@ export default function FeaturedContent() {
                     className={`relative overflow-hidden lg:col-span-8 ${reversed ? "lg:order-2" : ""}`}
                   >
                     <div className="relative h-170 w-200 overflow-hidden rounded-3xl ">
-                      <div className="h-full w-full">
+                      <div className=" relative h-full w-full">
                         <Image
                           src={item.img}
                           alt={item.title}
