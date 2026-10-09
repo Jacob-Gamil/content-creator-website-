@@ -91,14 +91,14 @@ export default function About() {
               {/* Orange glow behind the video */}
               <div className=" pointer-events-none absolute -inset-1 -z-10 rounded-xl bg-accent/50 blur-3xl" />
 
-              <div className="relative h-full w-full overflow-hidden rounded-2xl">
+              <div className="relative aspect-video overflow-hidden rounded-2xl">
                 {!isPlay && (
                   <div className=" w-full h-full absolute z-10 flex items-center justify-center">
                     <div
-                      className=" w-20 h-20 border-2 border-accent rounded-full flex items-center justify-center cursor-pointer"
+                      className=" w-15 h-15 border-2 border-accent rounded-full flex items-center justify-center cursor-pointer"
                       onClick={() => videoRef.current?.play()}
                     >
-                      <Play size={45} className=" text-accent" />
+                      <Play size={35} className=" text-accent" />
                     </div>
                   </div>
                 )}
