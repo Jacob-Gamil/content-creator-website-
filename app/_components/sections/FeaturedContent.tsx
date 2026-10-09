@@ -11,7 +11,7 @@ const items = [
     desc: "A behind-the-scenes look at the systems, tools, and rituals that power a sustainable creative practice.",
     date: "Sep 2026",
     views: "330K",
-    href: "https://www.instagram.com/reel/DdJwtCvoXzC/?stkn=ZHViN3ZvYzJubGls",
+    href: "https://instagram.com/mashhour._",
     img: "/image-3.jpg",
   },
   {
@@ -21,7 +21,7 @@ const items = [
     desc: "Breaking down the structure of a 15-second story that earns attention and leaves a mark.",
     date: "Feb 2026",
     views: "1.2M",
-    href: "#",
+    href: "https://facebook.com/share/1LQDNsss34/?mibextid=wwXIfr",
     img: "/img-4.jpg",
   },
   {
@@ -31,7 +31,7 @@ const items = [
     desc: "A daily experiment in momentum — what happens when you commit to making something every single day.",
     date: "Jan 2026",
     views: "3.4M",
-    href: "#",
+    href: "https://tiktok.com/@khaledramadan13",
     img: "/image-5.jpeg",
   },
 ];
@@ -68,11 +68,11 @@ export default function FeaturedContent() {
               >
                 {/* Image */}
                 <div
-                  className={`min-w-0 lg:col-span-8 ${
+                  className={`min-w-0 lg:col-span-6 ${
                     reversed ? "lg:order-2" : ""
                   }`}
                 >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white/5 sm:rounded-3xl lg:aspect-[5/4]">
+                  <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-white/5 sm:rounded-3xl lg:aspect-5/4">
                     <Image
                       src={item.img}
                       alt={item.title}
@@ -110,23 +110,23 @@ export default function FeaturedContent() {
 
                   {/* Metadata and Link */}
                   <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-white/10 pt-5 sm:mt-8">
-                    <div className="flex min-w-0 flex-col gap-1">
+                    {/* <div className="flex min-w-0 flex-col gap-1">
                       <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">
                         Date
                       </span>
                       <span className="text-xs font-display uppercase tracking-wider text-white sm:tracking-widest">
                         {item.date}
                       </span>
-                    </div>
+                    </div> */}
 
-                    <div className="flex min-w-0 flex-col gap-1">
+                    {/* <div className="flex min-w-0 flex-col gap-1">
                       <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">
                         Views
                       </span>
                       <span className="text-xs font-display uppercase tracking-wider text-white sm:tracking-widest">
                         {item.views}
                       </span>
-                    </div>
+                    </div> */}
 
                     <Link
                       href={item.href}

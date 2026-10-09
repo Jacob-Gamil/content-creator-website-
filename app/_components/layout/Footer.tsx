@@ -40,7 +40,7 @@ export default function Footer() {
                 href="mailto:hello@kaistudio.com"
                 className="mt-6 inline-block font-display text-lg text-white underline decoration-brand-orange/60 underline-offset-4 transition-colors hover:text-brand-orange"
               >
-                khaledmashhor136@gamil.com
+                khaledmashhor136@gmail.com
               </a>
               <h1 className="mt-2 inline-block font-display text-lg text-white underline decoration-brand-orange/60 underline-offset-4 transition-colors hover:text-brand-orange">
                 + (20) 1026700467
@@ -92,7 +92,7 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
           <p className="font-display text-[11px] uppercase tracking-[0.25em] text-white/40">
-            © 2026 K.Mashour — All Rights Reserved
+            © 2026 yacoub gamil — All Rights Reserved
           </p>
           <p className="font-display text-[11px] uppercase tracking-[0.25em] text-white/40">
             Built with <span className="text-brand-orange">creativity</span>.
