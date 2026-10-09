@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SectionLabel from "../ui/SectionLabel";
+import { Play } from "lucide-react";
 
 const stats = [
   { value: "754", label: "Videos", icon: "+" },
@@ -13,32 +14,18 @@ const stats = [
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlay, setIsPlay] = useState<boolean>(false);
 
   useEffect(() => {
-    const section = sectionRef.current;
     const video = videoRef.current;
+    if (!video) return;
 
-    if (!section || !video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      {
-        threshold: 0.3,
-      },
-    );
-
-    observer.observe(section);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+    if (isPlay) {
+      video.play().catch(() => setIsPlay(false));
+    } else {
+      video.pause();
+    }
+  }, [isPlay]);
 
   return (
     <section
@@ -102,26 +89,37 @@ export default function About() {
           <div className="lg:col-span-6">
             <div className="relative isolate aspect-video w-full">
               {/* Orange glow behind the video */}
-              <div className="absolute -inset-1 -z-10 rounded-xl bg-accent/50 blur-3xl" />
+              <div className=" pointer-events-none absolute -inset-1 -z-10 rounded-xl bg-accent/50 blur-3xl" />
 
               <div className="relative h-full w-full overflow-hidden rounded-2xl">
+                {!isPlay && (
+                  <div className=" w-full h-full absolute z-10 flex items-center justify-center">
+                    <div
+                      className=" w-20 h-20 border-2 border-accent rounded-full flex items-center justify-center cursor-pointer"
+                      onClick={() => videoRef.current?.play()}
+                    >
+                      <Play size={45} className=" text-accent" />
+                    </div>
+                  </div>
+                )}
                 <video
                   ref={videoRef}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  // muted
+                  onClick={() => setIsPlay((prev) => !prev)}
+                  onPlay={() => setIsPlay(true)}
+                  onPause={() => setIsPlay(false)}
+                  className="absolute inset-0 h-full w-full object-cover cursor-pointer"
                   playsInline
-                  loop
-                  preload="auto"
+                  // loop
                 >
                   <source src="/about-1.mp4" type="video/mp4" />
                   Your browser does not support video playback.
                 </video>
 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-linear-to-t from-brand-black via-transparent to-transparent" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-brand-black via-transparent to-transparent" />
 
                 {/* Video label */}
-                <div className="absolute bottom-6 left-6 flex items-center gap-3">
+                <div className="pointer-events-none absolute bottom-6 left-6 flex items-center gap-3">
                   <span className="h-px w-8 bg-brand-orange" />
 
                   <span className="text-[11px] font-display uppercase tracking-[0.3em] text-white/80">
