@@ -51,7 +51,7 @@ export default function Collaboration() {
                 actually want to watch.
               </p>
               <a
-                href="mailto:hello@kaistudio.com"
+                href="mailto:khaledmashhor136@gmail.com"
                 className="group mt-10 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-[11px] font-display font-semibold uppercase tracking-[0.2em] text-brand-black transition-all duration-500 hover:bg-brand-black hover:text-white"
               >
                 Start a Project
@@ -66,7 +66,7 @@ export default function Collaboration() {
           <div className="lg:col-span-6">
             <div className="border-t border-white/20">
               {services.map((s, i) => (
-                <div key={s}>
+                <div key={s} className=" cursor-pointer">
                   <div className="group flex items-center justify-between border-b border-white/20 py-5 transition-colors duration-300 hover:bg-white/10">
                     <div className="flex items-center gap-5">
                       <span className="font-display text-[11px] font-medium text-white/60">

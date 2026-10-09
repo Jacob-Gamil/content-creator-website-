@@ -91,12 +91,30 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center">
-          <p className="font-display text-[11px] uppercase tracking-[0.25em] text-white/40">
+          {/* <p className="font-display text-[11px] uppercase tracking-[0.25em] text-white/40">
             © 2026 yacoub gamil — All Rights Reserved
           </p>
           <p className="font-display text-[11px] uppercase tracking-[0.25em] text-white/40">
             Built with <span className="text-brand-orange">creativity</span>.
-          </p>
+          </p> */}
+          <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-between gap-4 px-6 text-[11px] font-display uppercase tracking-[0.2em] text-white/40 sm:flex-row lg:px-10">
+            <p className="font-display text-[11px] uppercase tracking-[0.25em] text-white/40">
+              Built with <span className="text-brand-orange">creativity</span>.
+            </p>
+            <p>© 2026 Khaled Mashhour. All Rights Reserved.</p>
+
+            <p>
+              Designed & Developed by{" "}
+              <a
+                href="https://jacob-g.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 transition-colors hover:text-brand-orange"
+              >
+                Yacoub Gamil
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
